@@ -227,6 +227,20 @@ $breakpoint-tablet: 768px;
             }
         }
     }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+
+        p{
+            font-size: 3vw;
+            font-weight: 300;
+        }
+
+    }
 
 
 

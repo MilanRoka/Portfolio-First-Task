@@ -34,7 +34,7 @@
     <?php include '../new/html/contact.html' ?>
     <?php include '../new/html/footer.html' ?>
 
-    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">&and;</button>
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()"><span class="material-icons">expand_less</span></button>
     <style>
         button {
             background-color: #ff5722;
@@ -46,7 +46,7 @@
             bottom: 2vw;
             right: 2vw;
             display: none;
-            padding: 10px 20px;
+            padding: 0.2vw 0.2vw ;
             border: none;
             color: white;
             cursor: pointer;
