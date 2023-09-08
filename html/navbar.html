@@ -1,0 +1,50 @@
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#">Milan Roka</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="burger-menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </nav>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const burgerMenu = document.querySelector(".burger-menu");
+      const navLinks = document.querySelector(".nav-links");
+  
+      burgerMenu.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+  
+      const links = document.querySelectorAll(".nav-links li a");
+  
+      links.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+  
+          const targetId = link.getAttribute("href").substring(1);
+  
+          const targetSection = document.getElementById(targetId);
+  
+          if (targetSection) {
+            window.scrollTo({
+              top: targetSection.offsetTop - 50, 
+              behavior: "smooth",
+            });
+          }
+  
+          navLinks.classList.remove("active");
+        });
+      });
+    });
+  </script>
+  
+</body>

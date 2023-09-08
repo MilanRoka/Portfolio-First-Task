@@ -1,0 +1,86 @@
+.contact-about {
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+.cntDescription {
+    @include description;
+
+}
+
+.lastSection {
+    display: flex;
+    padding: 3.5vw;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    padding-top: 2vw;
+
+    span {
+        font-size: 2.5vw;
+        margin-right: 1vw;
+        color: $h2-color;
+    }
+
+    i {
+        color: $secondary-color;
+        font-size: 2vw;
+    }
+
+    .name {
+        font-size: 1vw;
+        font-weight: 300;
+    }
+}
+
+.form {
+    padding-top: 3vw;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2vw;
+
+        input {
+            width: 100%;
+            height: 3vw;
+            border: 1px solid $h2-color;
+            border-radius: 5px;
+            padding: 1vw;
+            font-size: 1.5vw;
+            font-weight: 300;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            height: 10vw;
+            border: 1px solid $h2-color;
+            border-radius: 5px;
+            padding: 1vw;
+            font-size: 1.5vw;
+            font-weight: 300;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .messageBtn {
+        @include button;
+        margin-bottom: 0;
+        
+    }
+}

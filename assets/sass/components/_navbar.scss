@@ -1,0 +1,102 @@
+/* Define variables */
+$primary-color: #3498db;
+$bg-color: #fff;
+
+$navbar-bg-color: #333;
+$navbar-bg-hover-color: #3F72AF;
+$navbar-text-color: #fff;
+$navbar-link-color: #fff;
+$hover-color: #ff5722;
+$navbar-padding: 1vw;
+
+
+/* Navbar styles */
+.navbar {
+    background-color: $navbar-bg-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $navbar-padding 0;
+
+    .logo {
+        a {
+            margin-left: 3.5vw;
+            font-size: 3vw;
+            font-weight: bold;
+            color: $navbar-text-color;
+            text-decoration: none;
+        }
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin-right: 3.5vw;
+
+
+        li {
+            margin-left: 2vw;
+
+            a {
+                padding: 0.5vw;
+                font-size: 1.3vw;
+                text-decoration: none;
+                color: $navbar-link-color;
+                transition: color 0.3s;
+
+                &:hover {
+                    padding: 0.5vw;
+                    border-radius: 0.5vw;
+                    background-color: $hover-color;
+                    color: $bg-color;
+                }
+            }
+        }
+    }
+
+    .burger-menu {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+
+        .bar {
+            width: 4vw;
+            height: 0.4vw;
+            background-color: #fff;
+            margin: 0.5vw 4vw;
+        }
+    }
+
+    /* Media query for responsiveness */
+    @media screen and (max-width: 768px) {
+        .burger-menu {
+            display: flex;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 4.8vw;
+            left: 81.9vw;
+            background-color: $navbar-bg-color;
+            width: 18%;
+            text-align: center;
+            transition: all 0.3s;
+
+            &.active {
+                display: flex;
+            }
+
+            li {
+                margin: 10px 0;
+
+                a {
+                    color: #fff;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

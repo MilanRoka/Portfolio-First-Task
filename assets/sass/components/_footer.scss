@@ -1,0 +1,21 @@
+$background-color: #112D4E;
+$text-color: #F9F7F7;
+
+.container {
+    background-color:$background-color;
+    padding: 2vw 0;
+    text-align: center;
+    color: $text-color;
+    font-size: 1.5vw;
+    border-top: 1px solid #ddd;
+
+    a {
+        color: $text-color;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+            color: darken($text-color, 20%);
+        }
+    }
+}

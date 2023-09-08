@@ -1,0 +1,69 @@
+$primary-color: #112D4E;
+$secondary-color:#3F72AF;
+$hero-bg-color: #DBE2EF;
+$botton-color:#fff;
+
+// Hero styles
+#home {
+    position: relative; // Ensure the div is positioned relative to hold its content.
+
+    img {
+        position: absolute; // Position the image absolutely within the div.
+        top: 0;
+        left: 0;
+        width: 100%; // Make the image cover the entire div width.
+        height: 100%; // Make the image cover the entire div height.
+        object-fit: cover; // Maintain aspect ratio while covering the div.
+        z-index: -1; // Send the image to the background.
+    }
+
+    .hero {
+        // Your content styles here
+        color: black;
+        padding: 3.5vw;
+
+        .headLine {
+            font-size: 6vw;
+            font-weight: 700;
+            margin-bottom: 1vw;
+            color: white;
+    
+            strong {
+                color: $h2-color;
+            }
+    
+        }
+    }
+
+    .icons {
+        padding-top: 2vw;
+
+
+        i {
+            color: $h2-color;
+            font-size: 2.5vw;
+            transition: all 0.3s ease-in-out;
+            padding-right: 1.5vw;
+            cursor: pointer;
+
+            &:hover {
+                color: $botton-color;
+            }
+        }
+    }
+
+    .firstBtn {
+        @include button;
+        background-color: $hero-bg-color;
+        color: $primary-color;
+
+        &:hover {
+        color: $botton-color;
+        }
+
+
+    }
+
+    
+}
+@media screen and (max-width: 768px) {}

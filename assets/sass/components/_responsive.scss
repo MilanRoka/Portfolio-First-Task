@@ -1,0 +1,234 @@
+// $breakpoints: (phone: 640px,
+//     tablet: 768px,
+//     desktop: 1024px) !default;
+$breakpoint-tablet: 768px;
+
+@media (max-width: $breakpoint-tablet) {
+
+    h3 {
+        font-size: 3vw;
+    }
+
+    h2 {
+        font-size: 2vw;
+    }
+
+    h1 {
+        font-size: 3vw;
+    }
+
+    #home {
+        position: relative; // Ensure the div is positioned relative to hold its content.
+
+        img {
+            top: 0;
+            left: 0;
+            width: 100%; // Make the image cover the entire div width.
+            height: 85vw; // Make the image cover the entire div height.
+            object-fit: cover; // Maintain aspect ratio while covering the div.
+            z-index: -1; // Send the image to the background.
+        }
+
+        .hero {
+            // Your content styles here
+            color: black;
+            padding: 3.5vw;
+
+            .headLine {
+                font-size: 6vw;
+                font-weight: 700;
+                margin-bottom: 1vw;
+                color: white;
+
+                p {
+                    padding-top: 25vw;
+                }
+
+
+
+                strong {
+                    color: $h2-color;
+                }
+
+            }
+        }
+
+        .icons {
+            padding-top: 2vw;
+
+
+            i {
+                color: $h2-color;
+                font-size: 2.5vw;
+                transition: all 0.3s ease-in-out;
+                padding-right: 1.5vw;
+                cursor: pointer;
+
+                &:hover {
+                    color: $botton-color;
+                }
+            }
+        }
+
+        .firstBtn {
+            @include button;
+            background-color: $hero-bg-color;
+            color: $primary-color;
+
+            &:hover {
+                color: $botton-color;
+            }
+
+
+        }
+
+
+    }
+
+    #about {
+        padding-top: 19vw;
+
+        .about-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            width: 93%;
+            height: 100%;
+        }
+
+        .about {
+            padding: 3.5vw;
+            right: 0;
+            width: 100%;
+
+            button {
+                @include resButton;
+                margin-left: 37.5%;
+            }
+
+            .description {
+                @include resP;
+            }
+        }
+
+    }
+
+    .rectangles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .rectangle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10vw;
+            height: 100%;
+            width: 100%;
+
+            i {
+                color: $h2-color;
+                font-size: 6vw;
+            }
+
+            h4 {
+                font-size: 5vw;
+            }
+
+            .describe {
+                font-size: 3.5vw;
+                font-weight: 300;
+            }
+
+        }
+    }
+
+    .lastSection {
+        display: flex;
+        flex-direction: column;
+
+        .contact-about {
+            width: 100%;
+        }
+
+        .cntDescription {
+            @include resP;
+        }
+
+        .form {
+            width: 100%;
+        }
+
+        .icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 6vw;
+            padding-top: 2.5vw;
+
+            .icon {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding-top: 2vw;
+
+                span {
+                    font-size: 6vw;
+                    margin-right: 1vw;
+                    color: $h2-color;
+                }
+
+                i {
+                    color: $secondary-color;
+                    font-size: 6vw;
+                }
+
+                .name {
+                    font-size: 3vw;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .form-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2vw;
+
+            input {
+                width: 100%;
+                height: 5vw;
+                border: 1px solid $h2-color;
+                border-radius: 5px;
+                padding: 1vw;
+                font-size: 3vw;
+                font-weight: 300;
+            }
+
+            textarea {
+                width: 100%;
+                height: 15vw;
+                border: 1px solid $h2-color;
+                border-radius: 5px;
+                padding: 1vw;
+                font-size: 3vw;
+                font-weight: 300;
+            }
+        }
+
+        .form {
+            button {
+                @include resButton;
+            }
+        }
+    }
+
+
+
+
+}
